@@ -1,0 +1,38 @@
+
+{% extends 'base.html' %}
+{% from 'macros.html' import table %}
+
+{% block body %}
+<div class="container">
+    <h2><u>Daily Attendance</u> </h2>
+    <form method='POST'action='/dailyatt' form id="form_login">
+        <div class="mb-3">
+            <!-- <label for="sub" class="form-label">Enter sub</label>
+            <input type="text" name='sub' class="form-control" id="sub" aria-describedby="emailHelp"> -->
+            <label for="date" class="form-label">Enter Date</label>
+            <input type="date" name='date1' class="form-control" id="date" aria-describedby="emailHelp">
+            
+            <button type="submit" class="btn btn-outline-dark my-3">Submit</button>
+
+            
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+
+
+    </form>
+</div>
+<div class="container">
+    <h3>sub 1</h3>
+{{table(subject1)}}
+<h3>sub 2</h3>
+{{table(subject2)}}
+<h3>sub 3</h3>
+{{table(subject3)}}
+<h3>sub 4</h3>
+{{table(subject4)}}
+<h3>sub 5</h3>
+{{table(subject5)}}
+</div>
+
+    
+{% endblock body %}

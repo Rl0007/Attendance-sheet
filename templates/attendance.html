@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <h3><u>{{sub}}</u></h3>
+            <tr>
+                <th scope="col">sno</th>
+                <th scope="col">Roll_no</th>
+                <th scope="col">Date</th>
+                <th scope="col">Stud name</th>
+                <th scope="col">Attendance</th>
+    
+    
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in subject %}
+            <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{entry.rollno}}</td>
+            <td>{{entry.date}}</td>
+            <td>{{entry.std_name}}</td>
+            <td>{{entry.attendance}}</td>
+            <td><a href="/delete/{{entry.sno}},{{sub}} " button type="submit" class="btn btn-outline-dark">Delete</button></td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <!-- stu in sub1 -->
+    
+    
+            </tr>
+    
+            <!-- <button type="submit" class="btn btn-outline-dark">save</button> -->
+        </tbody>
+    
+    </table>
+</div>
+{% endblock body %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import table1 %}
+{% block body %}
+
+
+
+
+<div class="container">
+    <H2><u>Average attendance</u></H2>
+    <form method='POST' action='/average' form id="form_login">
+        <div class="mb-3">
+            <!-- <label for="sub" class="form-label">Enter sub</label>
+            <input type="text" name='sub' class="form-control" id="sub" aria-describedby="emailHelp"> -->
+            <label for="fromdate" class="form-label">From Date</label>
+            <input type="date" name='fromdate' class="form-control" id="fromdate" aria-describedby="emailHelp">
+            <label for="todate" class="form-label">To Date</label>
+            <input type="date" name='todate' class="form-control" id="todate" aria-describedby="emailHelp">
+            <label for="rollno" class="form-label">Enter rollno</label>
+            <input type="number" name='rollno' class="form-control" id="rollno" aria-describedby="emailHelp">
+
+            <button type="submit" class="btn btn-outline-dark my-3">Submit</button>
+
+
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+<div class="container">
+    <h3>sub 1</h3>
+    {{table1(subject1,av1)}}
+    <h3>sub 2</h3>
+    {{table1(subject2,av2)}}
+    <h3>sub 3</h3>
+    {{table1(subject3,av3)}}
+    <h3>sub 4</h3>
+    {{table1(subject4,av4)}}
+                    
+   
+    <h3>sub 5</h3>
+    {{table1(subject5,av5)}}
+</div>
+
+    </form>
+</div>
+    
+{% endblock body %}

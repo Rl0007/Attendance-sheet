@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% block title %}
+search
+{% endblock title %}
+{% block body %}
+<div class="container">
+    
+    <table class="table">
+        <thead>
+            <h3>sub1</h3>
+            <tr>
+                <th scope="col">sno</th>
+                <th scope="col">Date</th>
+                <th scope="col">Stud name</th>
+                <th scope="col">Attendance</th>
+            </tr>
+        </thead>
+            <tbody>
+                {% for entry in subject1 %}
+                <tr>
+                    <th scope="row">{{loop.index}}</th>
+                    <td>{{entry.date}}</td>
+                    <td>{{entry.std_name}}</td>
+                    <td>{{entry.attendance}}</td>
+                    <td><a href="/delete/{{entry.sno}} " button type="submit" class="btn btn-outline-dark">Delete</button></td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <!-- stu in sub1 -->
+            
+            
+                </tr>
+            
+                <!-- <button type="submit" class="btn btn-outline-dark">save</button> -->
+            </tbody>
+    </table>
+    <table class="table">
+        <thead>
+            <h3>sub2</h3>
+            <tr>
+                <th scope="col">sno</th>
+                <th scope="col">Date</th>
+                <th scope="col">Stud name</th>
+                <th scope="col">Attendance</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in subject2 %}
+            <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{entry.date}}</td>
+                <td>{{entry.std_name}}</td>
+                <td>{{entry.attendance}}</td>
+                <td><a href="/delete/{{entry.sno}} " button type="submit" class="btn btn-outline-dark">Delete</button></td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <!-- stu in sub1 -->
+    
+    
+            </tr>
+    
+            <!-- <button type="submit" class="btn btn-outline-dark">save</button> -->
+        </tbody>
+    </table>
+        <table class="table">
+            <thead>
+                <h3>sub3</h3>
+                <tr>
+                    <th scope="col">sno</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Stud name</th>
+                    <th scope="col">Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in subject3 %}
+                <tr>
+                    <th scope="row">{{loop.index}}</th>
+                    <td>{{entry.date}}</td>
+                    <td>{{entry.std_name}}</td>
+                    <td>{{entry.attendance}}</td>
+                    <td><a href="/delete/{{entry.sno}} " button type="submit" class="btn btn-outline-dark">Delete</button></td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <!-- stu in sub1 -->
+        
+        
+                </tr>
+        
+                <!-- <button type="submit" class="btn btn-outline-dark">save</button> -->
+            </tbody>
+        </table>
+        <table class="table">
+            <thead>
+                <h3>sub4</h3>
+                <tr>
+                    <th scope="col">sno</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Stud name</th>
+                    <th scope="col">Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in subject4 %}
+                <tr>
+                    <th scope="row">{{loop.index}}</th>
+                    <td>{{entry.date}}</td>
+                    <td>{{entry.std_name}}</td>
+                    <td>{{entry.attendance}}</td>
+                    <td><a href="/delete/{{entry.sno}} " button type="submit" class="btn btn-outline-dark">Delete</button></td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <!-- stu in sub1 -->
+        
+        
+                </tr>
+        
+                <!-- <button type="submit" class="btn btn-outline-dark">save</button> -->
+            </tbody>
+        </table>
+        <table class="table">
+            <thead>
+                <h3>sub5</h3>
+                <tr>
+                    <th scope="col">sno</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Stud name</th>
+                    <th scope="col">Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in subject5 %}
+                <tr>
+                    <th scope="row">{{loop.index}}</th>
+                    <td>{{entry.date}}</td>
+                    <td>{{entry.std_name}}</td>
+                    <td>{{entry.attendance}}</td>
+                    <td><a href="/delete/{{entry.sno}} " button type="submit" class="btn btn-outline-dark">Delete</button></td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <!-- stu in sub1 -->
+        
+        
+                </tr>
+        
+                <!-- <button type="submit" class="btn btn-outline-dark">save</button> -->
+            </tbody>
+        </table>
+</div>
+{% endblock body %}

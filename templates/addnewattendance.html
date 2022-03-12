@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <h2><u>Add New Attendance</u></h2>
+    <form method='POST'form id="form_login">
+        <div class="mb-3">
+            <label for="sub" class="form-label">Enter sub</label>
+            <input type="text" name='sub' class="form-control" id="sub" aria-describedby="emailHelp">
+            <label for="date" class="form-label">Enter Date</label>
+            <input type="date" name ='date1' class="form-control" id="date" aria-describedby="emailHelp">
+            <label for="rollno" class="form-label">Enter Rollno.</label>
+            <input type="number" name='rollno' class="form-control" id="rollno" aria-describedby="emailHelp">
+            <label for="name" class="form-label">Enter Name</label>
+            <input type="text" name='name' class="form-control" id="name" aria-describedby="emailHelp">
+            <label for="att" class="form-label">Enter att P/A</label>
+            <input type="text" name='att' class="form-control" id="att" aria-describedby="emailHelp">
+            <button type="submit" class="btn btn-outline-dark my-3">Submit</button>
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+        
+       
+    </form>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">sno</th>
+                <th scope="col">Roll_no</th>
+                <th scope="col">Date</th>
+                <th scope="col">Stud name</th>
+                <th scope="col">Attendance</th>
+                
+
+            </tr>
+        </thead>
+        <h2><u>{{sub}}</u></h2>
+        <tbody>
+            {% for entry in subject %}
+            <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{entry.rollno}}</td>
+            <td>{{entry.date}}</td>
+            <td>{{entry.std_name}}</td>
+            <td>{{entry.attendance}}</td>
+            <td><a href="/delete/{{entry.sno}},{{sub}} " button type="submit" class="btn btn-outline-dark">Delete</button></td>
+            
+                </tr>
+                
+            {% endfor %}
+         
+        
+        <!-- <button type="submit" class="btn btn-outline-dark">save</button> -->
+        </tbody>
+        
+    </table>
+</div>
+
+    
+{% endblock body %}
